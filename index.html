@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.8/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="js/script.js"></script>
+    <title></title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="RSSController">
+	<nav class="navbar">
+  		<div class="container-fluid">
+   			<div class="col-xs-12">
+    		<form class="navbar-form search-form">
+      			<div class="input-group">
+        			<input type="search" class="form-control" id="searchInput" name = "siteName" ng-model="search" ng-change = "changeUrl(search)" placeholder="Enter URL" autofocus>
+     			 
+					<div class="input-group-btn">
+      				<button class="btn" type="submit" id="searchBtn" ng-click="update()"><i class="glyphicon glyphicon-search"></i></button>
+    				</div>
+    			</div>
+    		</form>
+    		</div>
+  		</div>
+	</nav>
+	
+	
+	<div class="container">
+		<div class="examples row row-content">
+			<p>Examples:</p>
+			<button class = "btn col-sm-2 btn-example" ng-click = "changeUrl('http://feeds.bbci.co.uk/news/rss.xml?edition=int')">bbc.co.uk</button>
+			<button class = "btn col-sm-2 btn-example" ng-click = "changeUrl('https://www.gazeta.ru/export/rss/first.xml')">gazeta.ru</button>
+			<button class = "btn col-sm-2 btn-example" ng-click = "changeUrl('https://news.tut.by/rss/all.rss')">TUT.by</button>
+			<button class = "btn col-sm-2 btn-example" ng-click = "changeUrl('https://tech.onliner.by/feed')">tech.onliner.by</button>
+		</div>
+		<div class="news col-xs-12 row">
+			<div class="item animation" ng-repeat="item in items" >
+    			<h4>{{item.title}}</h4>
+    			<p class="date">{{item.publishedDate}}</p>
+    			<p ng-bind-html="item.content"></p>
+    			<div class="row">
+    			<button class = "btn col-sm-2 pull-right btn-more" ng-click="openLink(item.link)">Learn more</button>
+    			</div>
+    		</div>
+    	</div>
+	</div>
+</div>
+</body>
+
+</html>

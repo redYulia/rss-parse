@@ -1,0 +1,78 @@
+body {
+	background-color: #f7f7f7;
+}
+.navbar {
+	background-color: #7f7295;
+	border-radius: 0;
+}
+
+#searchInput,
+#searchBtn{
+	background-color: #665b77;
+	border-color: #665b77;
+	color:#f7f7f7;
+}
+.search-form .input-group {
+	width: 100%;
+}
+.navbar-form .input-group .input-group-btn {
+	width: 42px;
+}
+
+.navbar-form .form-control {
+	width: 100%;
+}
+.item {
+	width: 100%;
+	padding: 20px;
+	margin: 20px auto;
+	background-color: #fff;
+	border: 0;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 3px 6px 0px rgba(170, 170, 170, 0.75);
+	-moz-box-shadow:    0px 3px 6px 0px rgba(170, 170, 170, 0.75);
+	box-shadow:         0px 3px 6px 0px rgba(170, 170, 170, 0.75);
+}
+
+.btn-more, 
+.btn-example {
+	background-color: #7f7295;
+	width: auto;
+	margin: auto 2em;
+	color: #fff;
+}
+
+.btn-more:hover, 
+.btn-more:active, 
+.btn-more:focus, 
+.btn-example:focus,
+.btn-example:hover,
+.btn-example:active {
+	background-color: #948ba3;
+	color: #fff;
+}
+.date {
+	font-size: 12px;
+	color: #9c9c9c;
+}
+.btn-example {
+	margin: auto 0.5em;
+}
+
+
+
+.animation { -webkit-transition: 1s; }
+
+.animation.ng-enter-stagger,
+.animation.ng-leave-stagger{
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
+
+.animation.ng-leave { opacity: 1; }
+.animation.ng-leave.ng-leave-active { opacity: 0; }
+
+.animation.ng-enter { opacity: 0; }
+.animation.ng-enter.ng-enter-active { opacity: 1; }
